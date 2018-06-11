@@ -8,10 +8,6 @@ from config import basedir
 
 
 app = Flask(__name__)
-# 获取配置信息
-app.config.setdefault(
-    'SQLALCHEMY_TRACK_MODIFICATIONS', True
-)
 app.config.from_object('config')
 db = SQLAlchemy(app)
 lm = LoginManager()
